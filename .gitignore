@@ -1,0 +1,14 @@
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+movie-catalog-service/.idea
+movie-info-service/.idea
+ratings-data-service/.idea
+movie-catalog-service/HELP.md
+movie-info-service/HELP.md
+ratings-data-service/HELP.md
+movie-catalog-service/target/
+movie-info-service/target/
+ratings-data-service/target/
