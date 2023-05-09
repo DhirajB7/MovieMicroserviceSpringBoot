@@ -13,7 +13,7 @@ public class MovieController {
     @GetMapping("/{movieId}")
     public Movie getMovieDetail(@PathVariable("movieId") String movieId) {
 
-        return new Movie(movieId, "movie name");
+        return new Movie(movieId, "movie name","some Description");
 
     }
 
