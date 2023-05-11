@@ -1,4 +1,4 @@
-package com.dhirajb7.movieinfoservice.POJO;
+package com.dhirajb7.movieinfoservice.pojo;
 
 
 import lombok.AllArgsConstructor;

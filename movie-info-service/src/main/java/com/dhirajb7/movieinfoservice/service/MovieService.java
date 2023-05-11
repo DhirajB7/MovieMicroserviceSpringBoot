@@ -5,8 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.dhirajb7.movieinfoservice.POJO.MessageHolder;
 import com.dhirajb7.movieinfoservice.entity.Movie;
+import com.dhirajb7.movieinfoservice.pojo.MessageHolder;
 import com.dhirajb7.movieinfoservice.repository.MovieRepo;
 
 @Service
@@ -30,7 +30,7 @@ public class MovieService implements MovieServiceInterface {
 
 		} else {
 
-			object = new MessageHolder("Movie Id Not Found");
+			object = new MessageHolder("MOVIE ID NOT FOUND");
 
 			status = HttpStatus.NOT_FOUND;
 
@@ -49,7 +49,7 @@ public class MovieService implements MovieServiceInterface {
 
 		if (movieRepo.existsById(movieData.getMovieId())) {
 
-			object = new MessageHolder("Data Present");
+			object = new MessageHolder("MOVIE DATA PRESENT");
 
 			status = HttpStatus.CONFLICT;
 
@@ -100,6 +100,7 @@ public class MovieService implements MovieServiceInterface {
 
 	@Override
 	public ResponseEntity<Object> deleteAMovie(String movieId) {
+		
 		Object object = null;
 
 		HttpStatus status = null;
@@ -114,7 +115,7 @@ public class MovieService implements MovieServiceInterface {
 
 		} else {
 
-			object = new MessageHolder("DATA NOT FOUND");
+			object = new MessageHolder("MOVIE DATA NOT FOUND");
 
 			status = HttpStatus.NOT_FOUND;
 
