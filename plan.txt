@@ -1,0 +1,34 @@
+Dummy service - movie Catalog
+Dummy service - movie Info
+Dummy service - movie Rating Info
+---------------------------------------
+H2 DB - movie Catalog
+H2 DB - movie Info
+H2 DB - movie Rating Info
+----------------------------------------
+CRUD - movie Catalog
+CRUD - movie Info
+CRUD - movie Rating Info
+------------------------------------------
+ERROR HANDLING - movie Catalog
+ERROR HANDLING - movie Info
+ERROR HANDLING - movie Rating Info
+------------------------------------------
+ACTUATORS or Listners - movie Catalog
+ACTUATORS or Listners - movie Info
+ACTUATORS or Listners - movie Rating Info
+------------------------------------------
+TEST - movie Catalog
+TEST - movie Info
+TEST - movie Rating Info
+-------------------------------------------
+Impliment Eureka Server
+Impliment Eurek Client
+------------------------------------------
+Implement Auth 
+----------------------------------------
+TEST SO FAR
+---------------------------------------
+Replace H2 with PSSQL
+-----------------------------------------
+IMPLIMENTING Web UI With REACT - User Application + Admin Application 
