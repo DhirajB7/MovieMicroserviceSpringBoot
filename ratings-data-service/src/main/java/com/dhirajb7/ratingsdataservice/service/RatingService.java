@@ -48,7 +48,7 @@ public class RatingService implements RatingServiceInterface {
 
 		if (ratingRepo.existsById(ratingData.getMovieId())) {
 
-			object = new MessageHolder("RATING DATAPRESENT");
+			object = new MessageHolder("RATING DATA PRESENT");
 
 			status = HttpStatus.CONFLICT;
 

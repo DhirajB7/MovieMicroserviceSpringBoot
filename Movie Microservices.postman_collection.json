@@ -35,7 +35,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8082/movies/TEST_NAME_4",
+							"raw": "http://localhost:8082/movies/TEST_NAME_3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -43,7 +43,7 @@
 							"port": "8082",
 							"path": [
 								"movies",
-								"TEST_NAME_4"
+								"TEST_NAME_3"
 							]
 						}
 					},
@@ -75,7 +75,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"movieId\":\"TEST_NAME_4\",\r\n    \"name\":\"TEST name 4\",\r\n    \"description\":\"TEST description\"\r\n}",
+							"raw": "{\r\n    \"movieId\":\"TEST_NAME_1\",\r\n    \"name\":\"TEST name 1\",\r\n    \"description\":\"TEST description\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -103,7 +103,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"movieId\":\"TEST_NAME_4\",\r\n    \"name\":\"TEST name 4\",\r\n    \"description\":\"TEST description 4\"\r\n}",
+							"raw": "{\r\n    \"movieId\":\"TEST_NAME_3\",\r\n    \"name\":\"TEST name 3\",\r\n    \"description\":\"TEST description 3\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -119,6 +119,126 @@
 							"port": "8082",
 							"path": [
 								"movies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rating Info Service",
+			"item": [
+				{
+					"name": "getRatingById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/ratings/TEST_NAME_1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"ratings",
+								"TEST_NAME_1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMovieById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/ratings/TEST_NAME_3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"ratings",
+								"TEST_NAME_3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllRetting",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/ratings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"ratings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Rating",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieId\":\"TEST_NAME_2\",\r\n    \"rating\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/ratings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"ratings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Rating",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieId\":\"TEST_NAME_3\",\r\n    \"rating\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/ratings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"ratings"
 							]
 						}
 					},
@@ -144,31 +264,6 @@
 							"path": [
 								"catalog",
 								"Dhiraj"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Ratings Data Service",
-			"item": [
-				{
-					"name": "getRatingsByMovieId",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8083/ratingsdata/foo",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8083",
-							"path": [
-								"ratingsdata",
-								"foo"
 							]
 						}
 					},
