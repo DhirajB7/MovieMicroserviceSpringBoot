@@ -15,7 +15,7 @@ import com.dhirajb7.userinfoservice.entity.User;
 import com.dhirajb7.userinfoservice.service.UserService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
 
 	@Autowired
