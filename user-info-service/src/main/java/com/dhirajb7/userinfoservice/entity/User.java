@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table
+@Table(name = "USERS") //User is keyWord so DB won't be created
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,11 +16,9 @@ public class User {
 	
 	@Id
 	private String userId;
-	private String emailId;
+	private String email;
 	private String firstName;
 	private String lastName;
 	private int age;
-	private long phoneNumber;
-	
-
+	private long phone;
 }

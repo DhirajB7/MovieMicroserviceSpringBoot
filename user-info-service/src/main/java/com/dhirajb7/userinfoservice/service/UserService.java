@@ -3,11 +3,13 @@ package com.dhirajb7.userinfoservice.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 import com.dhirajb7.userinfoservice.entity.User;
 import com.dhirajb7.userinfoservice.pojo.MessageHolder;
 import com.dhirajb7.userinfoservice.repository.UserRepo;
 
+@Service
 public class UserService implements UserServiceInterface{
 	
 	@Autowired
