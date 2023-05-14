@@ -72,6 +72,7 @@ public class RatingService implements RatingServiceInterface {
 
 	@Override
 	public ResponseEntity<Object> editARating(Rating ratingData) {
+		
 		Object object = null;
 
 		HttpStatus status = null;
@@ -93,6 +94,7 @@ public class RatingService implements RatingServiceInterface {
 		}
 
 		return new ResponseEntity<Object>(object, status);
+		
 	}
 
 	@Override

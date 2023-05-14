@@ -1,26 +1,32 @@
 Dummy service - movie Catalog
 Dummy service - movie Info
 Dummy service - movie Rating Info
+Dummy service - User Info
 ---------------------------------------
 H2 DB - movie Catalog
 H2 DB - movie Info
 H2 DB - movie Rating Info
+H2 DB - User Info
 ----------------------------------------
 CRUD - movie Catalog
 CRUD - movie Info
 CRUD - movie Rating Info
+CRUD - User Info
 ------------------------------------------
 ERROR HANDLING - movie Catalog
 ERROR HANDLING - movie Info
 ERROR HANDLING - movie Rating Info
+ERROR HANDLING - User Info
 ------------------------------------------
 ACTUATORS or Listners - movie Catalog
 ACTUATORS or Listners - movie Info
 ACTUATORS or Listners - movie Rating Info
+ACTUATORS or Listners - User Info
 ------------------------------------------
 TEST - movie Catalog
 TEST - movie Info
 TEST - movie Rating Info
+TEST - User Info
 -------------------------------------------
 Impliment Eureka Server
 Impliment Eurek Client
