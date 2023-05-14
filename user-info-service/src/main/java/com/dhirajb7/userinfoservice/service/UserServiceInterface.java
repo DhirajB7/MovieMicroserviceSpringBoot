@@ -4,16 +4,16 @@ import org.springframework.http.ResponseEntity;
 
 import com.dhirajb7.userinfoservice.entity.User;
 
-public interface UserServiceInterface {
+interface UserServiceInterface {
 
-	public ResponseEntity<Object> getUserByuserId(String userId);
+	ResponseEntity<Object> getUserByuserId(String userId);
 
-	public ResponseEntity<Object> addUser(User userData);
+	ResponseEntity<Object> addUser(User userData);
 
-	public ResponseEntity<Object> getAllUsers();
+	ResponseEntity<Object> getAllUsers();
 
-	public ResponseEntity<Object> editAUser(User userData);
+	ResponseEntity<Object> editAUser(User userData);
 
-	public ResponseEntity<Object> deleteAUser(String userId);
+	ResponseEntity<Object> deleteAUser(String userId);
 
 }

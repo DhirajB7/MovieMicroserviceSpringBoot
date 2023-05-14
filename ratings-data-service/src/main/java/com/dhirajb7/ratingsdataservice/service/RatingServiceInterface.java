@@ -4,16 +4,16 @@ import org.springframework.http.ResponseEntity;
 
 import com.dhirajb7.ratingsdataservice.entity.Rating;
 
-public interface RatingServiceInterface {
+interface RatingServiceInterface {
 	
-	public ResponseEntity<Object> getRatingByMovieId(String movieId);
+	ResponseEntity<Object> getRatingByMovieId(String movieId);
 	
-	public ResponseEntity<Object> addRating(Rating ratingData);
+	ResponseEntity<Object> addRating(Rating ratingData);
 	
-	public ResponseEntity<Object> gettAllRatings();
+	ResponseEntity<Object> gettAllRatings();
 	
-	public ResponseEntity<Object> editARating(Rating ratingData);
+	ResponseEntity<Object> editARating(Rating ratingData);
 	
-	public ResponseEntity<Object> deleteARating(String movieId);
+	ResponseEntity<Object> deleteARating(String movieId);
 
 }
