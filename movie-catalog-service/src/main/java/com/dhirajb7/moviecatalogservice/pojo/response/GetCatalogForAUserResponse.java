@@ -22,7 +22,7 @@ public class GetCatalogForAUserResponse {
 	
 	private String email;
 	
-	private String age;
+	private int age;
 	
 	private List<MovieDetails> movieDetails;
 

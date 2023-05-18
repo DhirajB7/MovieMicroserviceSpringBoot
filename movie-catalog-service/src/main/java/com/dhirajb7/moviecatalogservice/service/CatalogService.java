@@ -17,6 +17,7 @@ import com.dhirajb7.moviecatalogservice.pojo.helper.MovieDetails;
 import com.dhirajb7.moviecatalogservice.pojo.helper.Rating;
 import com.dhirajb7.moviecatalogservice.pojo.helper.User;
 import com.dhirajb7.moviecatalogservice.pojo.response.AddCatalogResponse;
+import com.dhirajb7.moviecatalogservice.pojo.response.GetCatalogForAUserResponse;
 import com.dhirajb7.moviecatalogservice.repository.CatalogRepo;
 
 @Service
@@ -35,39 +36,57 @@ public class CatalogService implements CatalogServiceInterface {
 
 		HttpStatus httpStatus = null;
 
-		if (catalogRepo.existsById(userId)) {
+		try {
 
-			List<String> movieIds = catalogRepo.findById(userId).get().getMovieIds();
+			ResponseEntity<User> userObject = restTemplate.getForEntity("http://localhost:8082/user/" + userId,
+					User.class);
 
-			List<MovieDetails> listOfMovieDetails = new ArrayList<MovieDetails>();
+			User user = userObject.getBody();
 
-			try {
+			if (catalogRepo.existsById(userId)) {
+
+				List<String> movieIds = catalogRepo.findById(userId).get().getMovieIds();
+
+				List<MovieDetails> listOfMovieDetails = new ArrayList<MovieDetails>();
 
 				movieIds.forEach(oneMovieId -> {
 
 					ResponseEntity<Movie> movieObject = restTemplate
 							.getForEntity("http://localhost:8082/movie/" + oneMovieId, Movie.class);
 
+					Movie movie = movieObject.getBody();
+
 					ResponseEntity<Rating> ratingObject = restTemplate
 							.getForEntity("http://localhost:8083/rating/" + oneMovieId, Rating.class);
 
+					Rating rating = ratingObject.getBody();
+
+					listOfMovieDetails.add(new MovieDetails(movie.getMovieId(), movie.getName(), movie.getDescription(),
+							rating.getRating()));
+
 				});
-			} catch (HttpClientErrorException e) {
 
-				object = e.getResponseBodyAs(MessageHolder.class);
+				object = new GetCatalogForAUserResponse(user.getUserId(), user.getFirstName(), user.getLastName(),
+						user.getEmail(), user.getAge(), listOfMovieDetails);
 
-				httpStatus = HttpStatus.resolve(e.getStatusCode().value());
+				httpStatus = HttpStatus.OK;
 
+			} else {
+
+				object = new MessageHolder(userId + " NOT FOUND");
+
+				httpStatus = HttpStatus.NOT_FOUND;
 			}
 
-		} else {
+		} catch (HttpClientErrorException e) {
 
-			object = new MessageHolder("USER ID NOT FOUND");
+			object = e.getResponseBodyAs(MessageHolder.class);
 
-			httpStatus = HttpStatus.NOT_FOUND;
+			httpStatus = HttpStatus.resolve(e.getStatusCode().value());
+
 		}
 
-		return new ResponseEntity<Object>(catalogRepo.findById(userId), HttpStatus.OK);
+		return new ResponseEntity<Object>(object, httpStatus);
 
 	}
 
