@@ -1,5 +1,6 @@
 package com.dhirajb7.moviecatalogservice.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,9 @@ import org.springframework.web.client.RestTemplate;
 
 import com.dhirajb7.moviecatalogservice.entity.Catalog;
 import com.dhirajb7.moviecatalogservice.pojo.helper.MessageHolder;
+import com.dhirajb7.moviecatalogservice.pojo.helper.Movie;
+import com.dhirajb7.moviecatalogservice.pojo.helper.MovieDetails;
+import com.dhirajb7.moviecatalogservice.pojo.helper.Rating;
 import com.dhirajb7.moviecatalogservice.pojo.helper.User;
 import com.dhirajb7.moviecatalogservice.pojo.response.AddCatalogResponse;
 import com.dhirajb7.moviecatalogservice.repository.CatalogRepo;
@@ -26,8 +30,45 @@ public class CatalogService implements CatalogServiceInterface {
 
 	@Override
 	public ResponseEntity<Object> getCatalogDetailsForUserId(String userId) {
-		// TODO Auto-generated method stub
-		return null;
+
+		Object object = null;
+
+		HttpStatus httpStatus = null;
+
+		if (catalogRepo.existsById(userId)) {
+
+			List<String> movieIds = catalogRepo.findById(userId).get().getMovieIds();
+
+			List<MovieDetails> listOfMovieDetails = new ArrayList<MovieDetails>();
+
+			try {
+
+				movieIds.forEach(oneMovieId -> {
+
+					ResponseEntity<Movie> movieObject = restTemplate
+							.getForEntity("http://localhost:8082/movie/" + oneMovieId, Movie.class);
+
+					ResponseEntity<Rating> ratingObject = restTemplate
+							.getForEntity("http://localhost:8083/rating/" + oneMovieId, Rating.class);
+
+				});
+			} catch (HttpClientErrorException e) {
+
+				object = e.getResponseBodyAs(MessageHolder.class);
+
+				httpStatus = HttpStatus.resolve(e.getStatusCode().value());
+
+			}
+
+		} else {
+
+			object = new MessageHolder("USER ID NOT FOUND");
+
+			httpStatus = HttpStatus.NOT_FOUND;
+		}
+
+		return new ResponseEntity<Object>(catalogRepo.findById(userId), HttpStatus.OK);
+
 	}
 
 	@Override

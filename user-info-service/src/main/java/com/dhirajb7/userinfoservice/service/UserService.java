@@ -30,7 +30,7 @@ public class UserService implements UserServiceInterface{
 
 		} else {
 
-			object = new MessageHolder("USER ID NOT FOUND");
+			object = new MessageHolder(userId+" NOT FOUND");
 
 			status = HttpStatus.NOT_FOUND;
 
@@ -113,7 +113,7 @@ public class UserService implements UserServiceInterface{
 
 		} else {
 
-			object = new MessageHolder("USER ID NOT FOUND");
+			object = new MessageHolder(userId+" NOT FOUND");
 
 			status = HttpStatus.NOT_FOUND;
 

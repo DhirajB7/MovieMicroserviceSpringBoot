@@ -30,7 +30,7 @@ public class MovieService implements MovieServiceInterface {
 
 		} else {
 
-			object = new MessageHolder("MOVIE ID NOT FOUND");
+			object = new MessageHolder(movieId + " NOT FOUND");
 
 			status = HttpStatus.NOT_FOUND;
 
@@ -115,7 +115,7 @@ public class MovieService implements MovieServiceInterface {
 
 		} else {
 
-			object = new MessageHolder("MOVIE DATA NOT FOUND");
+			object = new MessageHolder(movieId + " NOT FOUND");
 
 			status = HttpStatus.NOT_FOUND;
 

@@ -30,7 +30,7 @@ public class RatingService implements RatingServiceInterface {
 
 		} else {
 
-			object = new MessageHolder("MOVIE ID NOT FOUND");
+			object = new MessageHolder(movieId+" NOT FOUND");
 
 			status = HttpStatus.NOT_FOUND;
 
@@ -114,7 +114,7 @@ public class RatingService implements RatingServiceInterface {
 
 		} else {
 
-			object = new MessageHolder("RATING DATA NOT FOUND");
+			object = new MessageHolder(movieId+" NOT FOUND");
 
 			status = HttpStatus.NOT_FOUND;
 
