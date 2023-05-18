@@ -38,7 +38,7 @@ public class CatalogService implements CatalogServiceInterface {
 
 		try {
 
-			ResponseEntity<User> userObject = restTemplate.getForEntity("http://localhost:8082/user/" + userId,
+			ResponseEntity<User> userObject = restTemplate.getForEntity("http://localhost:8084/user/" + userId,
 					User.class);
 
 			User user = userObject.getBody();
