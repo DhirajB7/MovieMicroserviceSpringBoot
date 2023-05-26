@@ -6,3 +6,8 @@
 movie-catalog-service/target/
 movie-info-service/target/
 ratings-data-service/target/
+user-info-service/target/
+movie-catalog-service/.idea/
+movie-info-service/.idea/
+ratings-data-service/.idea/
+user-info-service/.idea/

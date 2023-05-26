@@ -35,7 +35,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8082/movie/TEST_NAME_3",
+							"raw": "http://localhost:8082/movie/TEST_NAME_5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -43,7 +43,7 @@
 							"port": "8082",
 							"path": [
 								"movie",
-								"TEST_NAME_3"
+								"TEST_NAME_5"
 							]
 						}
 					},
@@ -75,7 +75,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"movieId\":\"MOVIE_4\",\r\n    \"name\":\"Movie 4\",\r\n    \"description\":\"movie name is movie 4 & its about movie called 4.\"\r\n}",
+							"raw": "{\r\n    \"movieId\":\"MOVIE_5\",\r\n    \"name\":\"Movie 5\",\r\n    \"description\":\"movie name is movie 5 & its about movie called 5.\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -103,7 +103,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"movieId\":\"TEST_NAME_3\",\r\n    \"name\":\"TEST name 3\",\r\n    \"description\":\"TEST description 3\"\r\n}",
+							"raw": "{\r\n    \"movieId\":\"TEST_NAME_5\",\r\n    \"name\":\"TEST name 5\",\r\n    \"description\":\"TEST description 5\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -255,7 +255,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/catalog/TEST1",
+							"raw": "http://localhost:8081/catalog/TEST2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -263,7 +263,7 @@
 							"port": "8081",
 							"path": [
 								"catalog",
-								"TEST1"
+								"TEST2"
 							]
 						}
 					},
@@ -276,7 +276,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userId\":\"TEST1\",\r\n    \"movieIds\":[\"MOVIE_1\",\"MOVIE_2\",\"MOVIE_4\"]\r\n}",
+							"raw": "{\r\n    \"userId\":\"TEST2\",\r\n    \"movieIds\":[\"MOVIE_1\",\"MOVIE_2\",\"MOVIE_3\",\"MOVIE_4\"]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -368,7 +368,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userId\":\"TEST1\",\r\n    \"email\":\"test1@gmail.com\",\r\n    \"firstName\":\"test\",\r\n    \"lastName\":\"1\",\r\n    \"age\":23,\r\n    \"phone\":8880093594\r\n}",
+							"raw": "{\r\n    \"userId\":\"TEST1\",\r\n    \"email\":\"test1@gmail.com\",\r\n    \"firstName\":\"test\",\r\n    \"lastName\":\"1\",\r\n    \"age\":33,\r\n    \"phone\":8880093594\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -396,7 +396,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userId\":\"TEST1@GMAIL.COM\",\r\n    \"email\":\"test1@gmail.com\",\r\n    \"firstName\":\"test1\",\r\n    \"lastName\":\"test1\",\r\n    \"age\":25,\r\n    \"phone\":8880093594\r\n}",
+							"raw": "{\r\n    \"userId\":\"TEST2\",\r\n    \"email\":\"test2@gmail.com\",\r\n    \"firstName\":\"test\",\r\n    \"lastName\":\"2\",\r\n    \"age\":25,\r\n    \"phone\":8880093594\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
