@@ -38,7 +38,7 @@ public class CatalogService implements CatalogServiceInterface {
 
 		try {
 
-			ResponseEntity<User> userObject = restTemplate.getForEntity("http://localhost:8084/user/" + userId,
+			ResponseEntity<User> userObject = restTemplate.getForEntity("http://USER-INFO-SERVICE/user/" + userId,
 					User.class);
 
 			User user = userObject.getBody();
@@ -52,12 +52,12 @@ public class CatalogService implements CatalogServiceInterface {
 				movieIds.forEach(oneMovieId -> {
 
 					ResponseEntity<Movie> movieObject = restTemplate
-							.getForEntity("http://localhost:8082/movie/" + oneMovieId, Movie.class);
+							.getForEntity("http://MOVIE-INFO-SERVICE/movie/" + oneMovieId, Movie.class);
 
 					Movie movie = movieObject.getBody();
 
 					ResponseEntity<Rating> ratingObject = restTemplate
-							.getForEntity("http://localhost:8083/rating/" + oneMovieId, Rating.class);
+							.getForEntity("http://RATINGS-DATA-SERVICE/rating/" + oneMovieId, Rating.class);
 
 					Rating rating = ratingObject.getBody();
 
@@ -101,7 +101,7 @@ public class CatalogService implements CatalogServiceInterface {
 
 		try {
 
-			ResponseEntity<User> user = restTemplate.getForEntity("http://localhost:8084/user/" + userId, User.class);
+			ResponseEntity<User> user = restTemplate.getForEntity("http://USER-INFO-SERVICE/user/" + userId, User.class);
 
 			if (catalogRepo.existsById(userId)) {
 
