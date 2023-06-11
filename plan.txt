@@ -13,11 +13,14 @@ CRUD - movie Info
 CRUD - movie Rating Info
 CRUD - User Info
 ------------------------------------------
+Impliment Eureka Server
+Impliment Eurek Client
+------------------------------------------ done till here
 ERROR HANDLING - movie Catalog
 ERROR HANDLING - movie Info
 ERROR HANDLING - movie Rating Info
 ERROR HANDLING - User Info
-------------------------------------------
+------------------------------------------ 
 ACTUATORS or Listners - movie Catalog
 ACTUATORS or Listners - movie Info
 ACTUATORS or Listners - movie Rating Info
@@ -27,10 +30,7 @@ TEST - movie Catalog
 TEST - movie Info
 TEST - movie Rating Info
 TEST - User Info
--------------------------------------------
-Impliment Eureka Server
-Impliment Eurek Client
-------------------------------------------
+----------------------------------------
 Implement Auth 
 ----------------------------------------
 TEST SO FAR
