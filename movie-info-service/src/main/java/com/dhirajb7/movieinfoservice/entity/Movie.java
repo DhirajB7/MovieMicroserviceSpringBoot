@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class Movie {
 
 	@Id
-	@Column(name = "movieid")
+	@Column(name = "movie_id")
     private String movieId;
     private String name;
     private String description;

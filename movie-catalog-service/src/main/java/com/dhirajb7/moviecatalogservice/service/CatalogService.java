@@ -124,6 +124,10 @@ public class CatalogService implements CatalogServiceInterface {
 
 				if (user.getStatusCode().is2xxSuccessful()) {
 
+					System.out.println("=====================================");
+					System.out.println(catalog.toString());
+					System.out.println("=====================================");
+					
 					Catalog addedCatalogToDB = catalogRepo.save(catalog);
 
 					object = new AddCatalogResponse(user.getBody().getFirstName(), user.getBody().getLastName(),
