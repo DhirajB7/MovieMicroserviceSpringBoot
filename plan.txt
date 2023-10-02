@@ -15,11 +15,28 @@ CRUD - User Info
 ------------------------------------------
 Impliment Eureka Server
 Impliment Eurek Client
+-----------------------------------------need to persist test data
+POSTGRESQL DB - movie Catalog
+POSTGRESQL DB - movie Info
+POSTGRESQL DB - movie Rating Info
+POSTGRESQL DB - User Info
+----------------------------------------
+CRUD - movie Catalog
+CRUD - movie Info
+CRUD - movie Rating Info
+CRUD - User Info
 ------------------------------------------ done till here
 ERROR HANDLING - movie Catalog
 ERROR HANDLING - movie Info
 ERROR HANDLING - movie Rating Info
 ERROR HANDLING - User Info
+-----------------------------------------
+Add JWT token Service.
+-----------------------------------------
+JWT TOKEN VERIFY - movie Catalog
+JWT TOKEN VERIFY - movie Info
+JWT TOKEN VERIFY - movie Rating Info
+JWT TOKEN VERIFY - User Info
 ------------------------------------------ 
 ACTUATORS or Listners - movie Catalog
 ACTUATORS or Listners - movie Info
@@ -34,7 +51,4 @@ TEST - User Info
 Implement Auth 
 ----------------------------------------
 TEST SO FAR
----------------------------------------
-Replace H2 with PSSQL
------------------------------------------
 IMPLIMENTING Web UI With REACT - User Application + Admin Application 
